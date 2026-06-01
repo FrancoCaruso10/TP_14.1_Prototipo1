@@ -3,21 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UImanager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
-    public scoreManager Score; 
-    public TextMeshProUGUI texto;
-    
+    public TextMeshProUGUI Timer;
+    // Start is called before the first frame update
     void Start()
     {
-        texto= GetComponent<TextMeshProUGUI>();
+        
     }
 
-    
+    // Update is called once per frame
     void Update()
     {
-        if (Score != null && texto != null){
-        texto.text = "Score: " + Score.score.ToString();
-        }
+        
+    }
+    
+    public void TimerUpdate(float tiemeRemaining)
+    {
+        Timer.text = "Tiempo: " + tiemeRemaining.ToString("F0");
     }
 }
