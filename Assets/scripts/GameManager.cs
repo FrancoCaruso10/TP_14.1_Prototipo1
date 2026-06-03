@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         if (timer > 0)
         {
             timer -= Time.deltaTime;
-            uiManager.TimerUpdate(timer);
+           uiManager.TimerUpdate(timer);
         }
         else
         {
