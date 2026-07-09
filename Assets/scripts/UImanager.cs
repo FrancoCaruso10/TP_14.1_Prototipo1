@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -6,6 +6,9 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     public TextMeshProUGUI Timer;
+
+    public GameObject winPanel ;
+    public GameObject gameOverPanel ;
 
     void Start()
     {
@@ -20,5 +23,15 @@ public class UIManager : MonoBehaviour
     public void TimerUpdate(float tiemeRemaining)
     {
         Timer.text = "Tiempo: " + tiemeRemaining.ToString("F0");
+    }
+
+    public void MostrarPantallaWin()
+    {
+        winPanel.SetActive(true);
+    }
+
+    public void MostrarPantallaGameOver()
+    {
+        gameOverPanel.SetActive(true);
     }
 }
